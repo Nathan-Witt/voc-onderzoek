@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheepvaartmuseum – Vaarten naar Ceylon</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Vaarten naar Ceylon</h1>
+
+<div class="chart-container">
+    <h2>Schepen per decennium</h2>
+    <canvas id="schepenPerDecennium"></canvas>
+</div>
+
+<div class="chart-container">
+    <h2>Meest voorkomende naam op schip "Den Berg"</h2>
+    <canvas id="namenDenBerg"></canvas>
+</div>
+
+<div class="chart-container">
+    <h2>Gemiddelde vaartijd naar Ceylon</h2>
+    <canvas id="vaartijdCeylon"></canvas>
+</div>
+
+<div class="chart-container">
+    <h2>Aantal opdrachten per kamer</h2>
+    <canvas id="opdrachtenPerKamer"></canvas>
+</div>
+
+<script>
+    /* vraag 1 schepen per decennium */
+    new Chart(document.getElementById('schepenPerDecennium'), {
+        type: 'bar',
+        data: {
+            labels: ['1670–1680', '1680–1690', '1690–1700', '1700–1710', '1710–1720', '1720–1730', '1730–1740', '1740–1750', '1750–1760', '1760–1770', '1770–1780', '1780–1790', '1790–1800'],
+            datasets: [{
+                label: 'Aantal schepen',
+                data: [2, 12, 24, 21, 22, 20, 27, 23, 21, 29, 18, 29, 18],
+                backgroundColor: ['rgba(54, 162, 235, 0.7)'],
+                borderColor: ['rgba(0, 0, 0, 1.2)']
+            }]
+        }
+    });
+
+    /* vraag 2 namen op het schip "Den Berg" */
+    new Chart(document.getElementById('namenDenBerg'), {
+        type: 'pie',
+        data: {
+            labels: ['Jan🥇', 'Pieter🥈', 'Hendrik🥉', 'Willem', 'Jacob', 'Cornelis', 'Claas', 'Christofel', 'Johannes', 'Jacobus', 'Gerrit', 'Barent', 'Albert', 'Abraham'],
+            datasets: [{
+                data: [135, 57, 32, 25, 25, 24, 18, 13, 12, 12, 12, 10, 8, 8],
+                backgroundColor: [
+                    'rgba(34, 139, 230, 0.7)',
+                    'rgba(220, 20, 60, 0.7)',
+                    'rgba(255, 165, 0, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(46, 204, 113, 0.7)',
+                    'rgba(241, 196, 15, 0.7)',
+                    'rgba(52, 152, 219, 0.7)',
+                    'rgba(231, 76, 60, 0.7)',
+                    'rgba(155, 89, 182, 0.7)',
+                    'rgba(26, 188, 156, 0.7)',
+                    'rgba(230, 126, 34, 0.7)',
+                    'rgba(127, 140, 141, 0.7)'
+                ],
+                borderColor: ['rgba(0, 0, 0, 1.2)']
+            }]
+        }
+    });
+
+    /* vraag 3 gemiddelde duur om naar Ceylon te gaan*/
+    new Chart(document.getElementById('vaartijdCeylon'), {
+        type: 'line',
+        data: {
+            labels: ['1680', '1690', '1700'],
+            datasets: [{
+                label: 'Gemiddelde vaartijd (dagen)',
+                data: [210, 195, 180],
+                borderColor: 'rgba(153, 102, 255, 1)',
+                fill: false,
+                tension: 0.2
+            }]
+        }
+    });
+
+    /* vraag 4 opdrachten per kamer */
+    new Chart(document.getElementById('opdrachtenPerKamer'), {
+        type: 'bar',
+        data: {
+            labels: ['Amsterdam', 'Zeeland', 'Regiment Württemburg', 'Regiment de Meuron', 'Enkhuizen', 'Regiment Luxemburg', 'Delft'],
+            datasets: [{
+                label: 'Aantal opdrachten',
+                data: [182, 67, 7, 5, 3, 2, 1],
+                backgroundColor: ['rgba(255, 159, 64, 0.7)'],
+                borderColor: ['rgba(0, 0, 0, 1.2)']
+            }]
+        }
+    });
+</script>
+
+</body>
+</html>
