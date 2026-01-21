@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdrachten per kamer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Opdrachten per kamer</h2>
+<canvas id="chart"></canvas>
+<p><a href="index.html">⬅ Terug</a></p>
+
+<script>
+new Chart(document.getElementById('chart'), {
+    type: 'bar',
+    data: {
+        labels: ['Amsterdam','Zeeland','Regiment Württemburg','Regiment de Meuron','Enkhuizen','Regiment Luxemburg','Delft'],
+        datasets: [{
+            label: 'Aantal opdrachten',
+            data: [182,67,7,5,3,2,1],
+            backgroundColor: 'rgba(255,159,64,0.7)'
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

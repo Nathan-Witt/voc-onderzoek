@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Schepen per decennium</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Schepen per decennium</h2>
+<canvas id="chart"></canvas>
+<p><a href="index.html">⬅ Terug</a></p>
+
+<script>
+new Chart(document.getElementById('chart'), {
+    type: 'bar',
+    data: {
+        labels: ['1670–1680','1680–1690','1690–1700','1700–1710','1710–1720','1720–1730','1730–1740','1740–1750','1750–1760','1760–1770','1770–1780','1780–1790','1790–1800'],
+        datasets: [{
+            label: 'Aantal schepen',
+            data: [2,12,24,21,22,20,27,23,21,29,18,29,18],
+            backgroundColor: 'rgba(54,162,235,0.7)'
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

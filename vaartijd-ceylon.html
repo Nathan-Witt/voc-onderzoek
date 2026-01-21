@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemiddelde vaartijd</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Gemiddelde vaartijd naar Ceylon</h2>
+<canvas id="chart"></canvas>
+<p><a href="index.html">⬅ Terug</a></p>
+
+<script>
+new Chart(document.getElementById('chart'), {
+    type: 'line',
+    data: {
+        labels: ['1680','1690','1700'],
+        datasets: [{
+            label: 'Dagen',
+            data: [210,195,180],
+            borderColor: 'rgba(153,102,255,1)',
+            tension: 0.32,
+            fill: false
+        }]
+    }
+});
+</script>
+
+</body>
+</html>
