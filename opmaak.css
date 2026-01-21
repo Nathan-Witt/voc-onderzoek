@@ -1,0 +1,15 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #ff0000;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
