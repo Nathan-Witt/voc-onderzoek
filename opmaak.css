@@ -1,7 +1,7 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             margin: 40px;
-            background-color: #97AFBD;
+            background-color: #FFFFFF;
         }
         h1, h2 {
             text-align: center;
@@ -15,7 +15,7 @@
         }
 
 .navbar {
-  background-color: #0f172a; /* donker blauw */
+  background-color: #0f172a;
   padding: 15px 0;
   position: sticky;
   top: 0;
