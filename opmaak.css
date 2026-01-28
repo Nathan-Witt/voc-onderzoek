@@ -1,5 +1,5 @@
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
             margin: 30px;
             background-color: #FFFFFF;
         }
@@ -9,7 +9,7 @@
             border-style: solid;
             border-width: 3px;
             border-radius: 15px;
-            background-color: #c9c5c5
+            background-color: #DBDBDB
         }
         .chart-container {
             width: 80%;
