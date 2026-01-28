@@ -9,6 +9,7 @@
             border-style: solid;
             border-width: 3px;
             border-radius: 15px;
+            background-color: #c9c5c5
         }
         .chart-container {
             width: 80%;
