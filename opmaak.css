@@ -1,25 +1,31 @@
         body {
             font-family: 'Courier New', Courier, monospace;
-            margin: 40px;
+            margin: 30px;
             background-color: #FFFFFF;
         }
-        h1, h2 {
+        h1, h2, h3, h4 {
             text-align: center;
+            border-color: #477894;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 15px;
         }
         .chart-container {
             width: 80%;
             margin: 40px auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 15px;
+            
         }
 
 .navbar {
-  background-color: #0f172a;
+  background-color: #477894;
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-radius: 15px;
 }
 
 .nav-container {
@@ -34,7 +40,7 @@
 
 .logo {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.62rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -42,7 +48,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -50,9 +56,9 @@
 .nav-links a {
   color: #e5e7eb;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.08rem;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 /* Hover effect */
