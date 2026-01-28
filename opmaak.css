@@ -61,7 +61,6 @@
   transition: color 0.5s ease;
 }
 
-/* Hover effect */
 .nav-links a:hover {
   color: #38bdf8;
 }
