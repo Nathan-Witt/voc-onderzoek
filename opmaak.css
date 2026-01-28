@@ -38,11 +38,10 @@
   align-items: center;
 }
 
-.logo {
-  color: #ffffff;
-  font-size: 1.62rem;
-  font-weight: bold;
-  text-decoration: none;
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
