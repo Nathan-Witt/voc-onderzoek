@@ -7,32 +7,36 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
 <nav class="navbar">
   <div class="nav-container">
-<a href="index.html" class="logo">
-  <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
-</a>  
-
+    <a href="index.html" class="logo">
+      <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
+    </a>  
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
       <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
-      <li><a href="schepen-per-decennium.html">Schepen per deccenium</a></li
+      <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
       <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
     </ul>
   </div>
 </nav>
-    
+
 <h2>Meest voorkomende namen op “Den Berg”</h2>
-<canvas id="chart"></canvas>
-    
+
+<div class="chart-container">
+    <canvas id="chart"></canvas>
+</div>
 
 <script>
 new Chart(document.getElementById('chart'), {
     type: 'pie',
     data: {
-        labels: ['Jan🥇','Pieter🥈','Hendrik🥉','Willem','Jacob','Cornelis','Claas','Christofel','Johannes','Jacobus','Gerrit','Barent','Albert','Abraham'],
+        labels: [
+            'Jan🥇','Pieter🥈','Hendrik🥉','Willem','Jacob','Cornelis',
+            'Claas','Christofel','Johannes','Jacobus',
+            'Gerrit','Barent','Albert','Abraham'
+        ],
         datasets: [{
             data: [135,57,32,25,25,24,18,13,12,12,12,10,8,8],
             backgroundColor: [
@@ -41,11 +45,17 @@ new Chart(document.getElementById('chart'), {
                 'rgba(46,204,113,0.7)','rgba(241,196,15,0.7)','rgba(52,152,219,0.7)',
                 'rgba(231,76,60,0.7)','rgba(155,89,182,0.7)','rgba(26,188,156,0.7)',
                 'rgba(230,126,34,0.7)','rgba(127,140,141,0.7)'
-            ]
+            ],
+            borderColor: 'rgba(0,0,0,0.6)',
+            borderWidth: 1
         }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: { legend: { position: 'right' } }
     }
 });
 </script>
-
 </body>
 </html>
