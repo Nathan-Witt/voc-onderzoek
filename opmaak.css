@@ -85,8 +85,8 @@ h4 {
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.05rem;
-    padding: 10px 18px;
+    font-size: 0.9rem;
+    padding: 7px 12px;
     background-color: #5a8fab;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
