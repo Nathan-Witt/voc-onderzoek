@@ -78,6 +78,8 @@ h4 {
     gap: 30px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -88,9 +90,17 @@ h4 {
     background-color: #5a8fab;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
     background-color: #6fa4c0;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+    }
 }
