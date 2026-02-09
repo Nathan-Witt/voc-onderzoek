@@ -4,7 +4,6 @@ body {
     background-color: #FFFFFF;
 }
 
-/* ===== Titels ===== */
 h1, h2, h3, h4 {
     text-align: center;
     border: 3px solid #477894;
@@ -18,7 +17,6 @@ h4 {
     font-weight: normal;
 }
 
-/* ===== Layout grafiek + tekst ===== */
 .chart-text-wrapper {
     display: flex;
     align-items: stretch;
@@ -27,7 +25,6 @@ h4 {
     max-width: 1200px;
 }
 
-/* Grafiek */
 .chart-container {
     width: 60%;
     max-width: 700px;
@@ -45,7 +42,6 @@ h4 {
     height: auto !important;
 }
 
-/* Tekstblok */
 .chart-text {
     flex: 1;
     background-color: #F2F2F2;
@@ -66,7 +62,6 @@ h4 {
     margin-bottom: 20px;
 }
 
-/* ===== Navigatie ===== */
 .navbar {
     background-color: #477894;
     padding: 15px 0;
@@ -118,7 +113,6 @@ h4 {
     transform: translateY(-2px);
 }
 
-/* ===== Afbeeldingen ===== */
 .images {
     display: flex;
     gap: 30px;
@@ -132,7 +126,6 @@ h4 {
     display: block;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 900px) {
     .chart-text-wrapper {
         flex-direction: column;
