@@ -2,37 +2,57 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="opmaak.css">
     <title>Schepen per decennium</title>
+    <link rel="stylesheet" href="opmaak.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">
-      <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
-      <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
-      <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
-      <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
-    </ul>
-  </div>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
+            <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
+            <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
+            <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
+        </ul>
+    </div>
 </nav>
 
 <h2>Schepen per decennium</h2>
 
-<div class="chart-container">
-    <canvas id="chart"></canvas>
+<div class="chart-text-wrapper">
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="chart-text">
+        <h3>Toelichting</h3>
+        <p>
+            Deze staafdiagram toont het aantal schepen dat per decennium
+            vanuit Nederland naar Azië vertrok in de periode 1670–1800.
+        </p>
+        <p>
+            Er zijn duidelijke schommelingen zichtbaar. In sommige decennia
+            gingen er veel meer schepen varen, wat kan wijzen op
+            economische groei of een grotere handelsvraag.
+        </p>
+    </div>
 </div>
 
 <script>
 new Chart(document.getElementById('chart'), {
     type: 'bar',
     data: {
-        labels: ['1670–1680','1680–1690','1690–1700','1700–1710','1710–1720','1720–1730','1730–1740','1740–1750','1750–1760','1760–1770','1770–1780','1780–1790','1790–1800'],
+        labels: [
+            '1670–1680','1680–1690','1690–1700','1700–1710','1710–1720',
+            '1720–1730','1730–1740','1740–1750','1750–1760','1760–1770',
+            '1770–1780','1780–1790','1790–1800'
+        ],
         datasets: [{
             label: 'Aantal schepen',
             data: [2,12,24,21,22,20,27,23,21,29,18,29,18],
@@ -41,8 +61,15 @@ new Chart(document.getElementById('chart'), {
             borderWidth: 1
         }]
     },
-    options: { responsive: true, maintainAspectRatio: true }
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: { display: true }
+        }
+    }
 });
 </script>
+
 </body>
 </html>
