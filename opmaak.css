@@ -4,36 +4,69 @@ body {
     background-color: #FFFFFF;
 }
 
+/* ===== Titels ===== */
 h1, h2, h3, h4 {
     text-align: center;
-    border-color: #477894;
-    border-style: solid;
-    border-width: 3px;
+    border: 3px solid #477894;
     border-radius: 15px;
     background-color: #DBDBDB;
+    padding: 12px;
+    margin-bottom: 25px;
 }
 
 h4 {
     font-weight: normal;
 }
 
-.chart-container {
-    width: 70%;
-    max-width: 700px;
-    height: 60%;
+/* ===== Layout grafiek + tekst ===== */
+.chart-text-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
     margin: 40px auto;
-    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Grafiek */
+.chart-container {
+    width: 60%;
+    max-width: 700px;
+    padding: 25px;
     background: white;
     border-radius: 15px;
-    position: relative;
-    border: solid;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chart-container canvas {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
 }
 
+/* Tekstblok */
+.chart-text {
+    flex: 1;
+    background-color: #F2F2F2;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #477894;
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chart-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* ===== Navigatie ===== */
 .navbar {
     background-color: #477894;
     padding: 15px 0;
@@ -57,19 +90,6 @@ h4 {
     width: auto;
     display: block;
     margin-left: -30px;
-}
-
-.images {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.img {
-    height: 250px;
-    width: auto;
-    display: block;
 }
 
 .nav-links {
@@ -98,9 +118,23 @@ h4 {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .nav-links a {
-        font-size: 0.95rem;
-        padding: 8px 14px;
+/* ===== Afbeeldingen ===== */
+.images {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img {
+    height: 250px;
+    width: auto;
+    display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .chart-text-wrapper {
+        flex-direction: column;
     }
 }
