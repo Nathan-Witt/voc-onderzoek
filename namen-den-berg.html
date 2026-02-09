@@ -2,30 +2,51 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="opmaak.css">
     <title>Namen op schip Den Berg</title>
+    <link rel="stylesheet" href="opmaak.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">
-      <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
-    </a>  
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
-      <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
-      <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
-      <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
-    </ul>
-  </div>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
+            <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
+            <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
+            <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
+        </ul>
+    </div>
 </nav>
 
 <h2>Meest voorkomende namen op “Den Berg”</h2>
 
-<div class="chart-container">
-    <canvas id="chart"></canvas>
+<div class="chart-text-wrapper">
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="chart-text">
+        <h3>Toelichting</h3>
+        <p>
+            Deze cirkeldiagram laat zien welke namen het meest voorkwamen
+            op het VOC-schip “Den Berg”.
+            De naam Jan komt ver het meest voor, gevolgd door
+            Pieter en Hendrik.
+        </p>
+        <p>
+            Je kan zien dat alle namen heel christelijk en Nederlands zijn er dat er geen een naam
+            is die uit een ander continent zou voorkomen.
+        </p>
+        <p>
+            Conclusie, er waren in die tijd geen buitenlanders toegelaten op VOC schepen en was Jan
+            een erg voorkomende naam.
+        </p>
+    </div>
 </div>
 
 <script>
@@ -53,9 +74,12 @@ new Chart(document.getElementById('chart'), {
     options: {
         responsive: true,
         maintainAspectRatio: true,
-        plugins: { legend: { position: 'right' } }
+        plugins: {
+            legend: { position: 'right' }
+        }
     }
 });
 </script>
+
 </body>
 </html>
