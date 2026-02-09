@@ -2,47 +2,75 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <title>Gemiddelde vaartijd naar Ceylon</title>
     <link rel="stylesheet" href="opmaak.css">
-    <title>Gemiddelde vaartijd uit Amsterdam</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">
-      <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
-      <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
-      <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
-      <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
-    </ul>
-  </div>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/6cQHmz37/New-Project-2.png" alt="MijnSite Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="namen-den-berg.html">Namen op schip "Den Berg"</a></li>
+            <li><a href="opdrachten-per-kamer.html">Opdrachten per kamer</a></li>
+            <li><a href="schepen-per-decennium.html">Schepen per decennium</a></li>
+            <li><a href="vaartijd-ceylon.html">Gemiddelde vaartijd</a></li>
+        </ul>
+    </div>
 </nav>
 
 <h2>Gemiddelde vaartijd naar Ceylon</h2>
 
-<div class="chart-container">
-    <canvas id="chart"></canvas>
+<div class="chart-text-wrapper">
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="chart-text">
+        <h3>Toelichting</h3>
+        <p>
+            Deze lijngrafiek laat de gemiddelde vaartijd zien van schepen
+            die vanuit Amsterdam naar Ceylon voeren tussen 1670 en 1800.
+        </p>
+        <p>
+            De vaartijd schommelde door de jaren heen, onder andere door
+            het weer, vaarroutes en de staat van de schepen.
+            Over het algemeen lag de reisduur rond de 250 tot 270 dagen.
+        </p>
+    </div>
 </div>
 
 <script>
 new Chart(document.getElementById('chart'), {
     type: 'line',
     data: {
-        labels: ['1670 - 1680', '1680 -1690', '1690 -1700', '1700 - 1710', '1710 - 1720', '1720 -1730', '1730 - 1740', '1740 - 1750', '1750-1760', '1760-1770', '1770-1780', '1780-1790', '1790-1800'],
+        labels: [
+            '1670 - 1680','1680 - 1690','1690 - 1700','1700 - 1710',
+            '1710 - 1720','1720 - 1730','1730 - 1740','1740 - 1750',
+            '1750 - 1760','1760 - 1770','1770 - 1780','1780 - 1790','1790 - 1800'
+        ],
         datasets: [{
             label: 'Dagen',
             data: [246, 244.3, 269.8, 246.5, 244.6, 258.9, 267.4, 268, 257, 268.2, 250.7, 267.8, 280.2],
             borderColor: 'rgba(153,102,255,1)',
+            borderWidth: 2,
             tension: 0.32,
             fill: false
         }]
     },
-    options: { responsive: true, maintainAspectRatio: true }
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: { display: true }
+        }
+    }
 });
 </script>
+
 </body>
 </html>
