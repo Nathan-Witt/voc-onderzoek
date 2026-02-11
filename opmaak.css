@@ -131,3 +131,14 @@ h4 {
         flex-direction: column;
     }
 }
+
+.achtergrond-tekst {
+    max-width: 1120px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    border: 2px solid #477894;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
