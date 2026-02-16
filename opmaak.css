@@ -14,7 +14,7 @@ main {
 
 h1, h2, h3{
     text-align: center;
-    border: 3px solid #477894;
+    border: 3px solid #5E4328;
     border-radius: 15px;
     background-color: #DBDBDB;
     padding: 12px;
@@ -55,7 +55,7 @@ h4 {
     background-color: #F2F2F2;
     padding: 40px;
     border-radius: 15px;
-    border: 2px solid #477894;
+    border: 2px solid #5E4328;
 
     font-size: 1.15rem;
     line-height: 1.8;
@@ -71,7 +71,11 @@ h4 {
 }
 
 .navbar {
-    background-color: #477894;
+    background-image: url("https://i.ibb.co/RkjmFWFt/image-3.png");
+    background-size: cover;        /* vult hele navbar */
+    background-position: center;   /* centreert afbeelding */
+    background-repeat: no-repeat;
+    border-radius: 20px;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -110,14 +114,14 @@ h4 {
     text-decoration: none;
     font-size: 0.9rem;
     padding: 7px 12px;
-    background-color: #5a8fab;
+    background-color: #C9A46A;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
 }
 
 .nav-links a:hover {
-    background-color: #6fa4c0;
+    background-color: #B88B4A;
     transform: translateY(-2px);
 }
 
@@ -146,7 +150,7 @@ h4 {
     padding: 40px;
     background-color: #F8F8F8;
     border-radius: 15px;
-    border: 2px solid #477894;
+    border: 2px solid #5E4328;
     font-size: 1.1rem;
     line-height: 1.9;
 }
